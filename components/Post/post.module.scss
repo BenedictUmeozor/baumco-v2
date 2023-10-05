@@ -1,0 +1,60 @@
+.post {
+  .image {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  a {
+    margin-bottom: 0.75rem;
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    &:first-child {
+      font-size: 0.95rem;
+      color: #888;
+      margin-bottom: 0.5rem;
+    }
+    &:last-child {
+      font-size: 0.8rem;
+
+      span {
+        color: var(--primary-color);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

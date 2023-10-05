@@ -1,0 +1,66 @@
+@import "../../sass/mixins";
+
+.nav {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #fff;
+  z-index: 3;
+
+  ul {
+    margin: 6.5rem auto 1.5rem;
+    width: 95%;
+
+    li {
+      &.register {
+        a {
+          background-color: var(--primary-color);
+          color: #fff;
+        }
+      }
+
+      &.login {
+        a {
+          color: var(--primary-color);
+        }
+      }
+
+      a {
+        padding: 1rem 0.75rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+        display: block;
+        width: 100%;
+
+        &.active {
+          color: var(--primary-color);
+        }
+
+        &:hover {
+          background-color: #ddd;
+          color: var(--primary-color);
+        }
+      }
+
+      .accordion {
+        .content {
+          margin-left: 1rem;
+          a {
+            display: block;
+            padding: 0.75rem;
+            font-weight: normal;
+            color: #444;
+          }
+        }
+      }
+    }
+  }
+}
+

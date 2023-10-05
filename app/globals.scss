@@ -2,12 +2,22 @@
   --primary-color: #0040ff;
   line-height: 1.5;
   font-size: 16px;
+  color: #111;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .loader {
@@ -17,4 +27,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #111;
+  transition: all 0.3s ease-in-out;
+}
+
+button {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
 }

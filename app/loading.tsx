@@ -1,10 +1,9 @@
 import { GridLoader } from "react-spinners";
 
-const Loading = () => {
+export default function Loading() {
   return (
     <div className="loader">
       <GridLoader color="#0040ff" loading={true} size={30} />
     </div>
   );
-};
-export default Loading;
+}
