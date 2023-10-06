@@ -51,6 +51,11 @@
           border: 0.15rem solid #ccc;
           padding: 0 0.5rem;
           border-radius: 0.25rem;
+          font-family: "Montserrat", sans-serif;
+
+          &::placeholder {
+            font-family: "Montserrat", sans-serif;
+          }
 
           &:focus {
             outline: none;
