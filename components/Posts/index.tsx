@@ -5,6 +5,9 @@ import styles from "./posts.module.scss";
 const Posts = () => {
   return (
     <section className={styles.posts}>
+      <Container>
+        <h2>Recent Posts</h2>
+      </Container>
       <Container className={styles.container}>
         <Post />
         <Post />
