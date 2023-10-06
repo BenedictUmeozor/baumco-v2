@@ -50,6 +50,24 @@
       }
 
       .accordion {
+        & > a {
+          display: flex;
+          align-items: center;
+          column-gap: 0.25rem;
+
+          svg {
+            width: 1.3rem;
+            transition: all 0.3s ease-in;
+          }
+        }
+
+        &:hover {
+          a {
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
         .content {
           margin-left: 1rem;
           a {
@@ -63,4 +81,3 @@
     }
   }
 }
-

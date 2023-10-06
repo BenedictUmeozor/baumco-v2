@@ -14,13 +14,16 @@ const Post = () => {
         <Link href="/">
           <h3>Lorem ipsum dolor sit amet consectetur.</h3>
         </Link>
-        <p>
+        <p className={styles.text}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
           magnam, cumque accusamus dicta provident necessitatibus?
         </p>
-        <p>
-          By <span>Admin</span>
-        </p>
+        <div className={styles.footer}>
+          <p>5th October, 2023</p> |{" "}
+          <p>
+            By <span>Admin</span>
+          </p>
+        </div>
       </div>
     </div>
   );

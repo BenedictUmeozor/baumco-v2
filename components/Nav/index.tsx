@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./nav.module.scss";
 import { Fragment } from "react";
 import { usePathname } from "next/navigation";
+import { ChevronUp } from "react-feather";
 
 const Nav = () => {
   const pathname = usePathname();
@@ -23,7 +24,7 @@ const Nav = () => {
           <li>
             <div className={styles.dropdown}>
               <Link href="#" onClick={(e) => e.preventDefault()}>
-                Electronics
+                Electronics <ChevronUp />
               </Link>
               <div className={styles.content}>
                 <Link

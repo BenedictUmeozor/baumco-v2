@@ -2,43 +2,59 @@
 
 import Link from "next/link";
 import styles from "./nav.module.scss";
-import { Fragment } from "react";
+import { Fragment, MouseEventHandler, useState } from "react";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { ChevronUp } from "react-feather";
 
-const MobileNav = () => {
+type PropTypes = {
+  onClick: MouseEventHandler<HTMLAnchorElement>;
+  key: string;
+};
+
+const MobileNav = ({ onClick, key }: PropTypes) => {
   const pathname = usePathname();
+  const [showContent, setShowContent] = useState(false);
 
   return (
     <Fragment>
-      <AnimatePresence>
-        <motion.nav
-          key={pathname + 5}
-          initial={{ x: "-100%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: "100%", opacity: 0 }}
-          className={styles.nav}
-        >
-          <ul>
-            <li>
+      <motion.nav
+        key={key}
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.25 }}
+        className={styles.nav}
+      >
+        <ul>
+          <li>
+            <Link
+              href="/"
+              className={`${pathname === "/" ? styles.active : ""}`}
+              onClick={onClick}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <div className={styles.accordion}>
               <Link
-                href="/"
-                className={`${pathname === "/" ? styles.active : ""}`}
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setShowContent((prev) => !prev);
+                }}
               >
-                Home
+                Electronics <ChevronUp />
               </Link>
-            </li>
-            <li>
-              <div className={styles.accordion}>
-                <Link href="#" onClick={(e) => e.preventDefault()}>
-                  Electronics
-                </Link>
+              {showContent && (
                 <div className={styles.content}>
                   <Link
                     href="/electronics/analog"
                     className={`${
                       pathname === "/electronics/analog" ? styles.active : ""
                     }`}
+                    onClick={onClick}
                   >
                     Analog
                   </Link>
@@ -47,6 +63,7 @@ const MobileNav = () => {
                     className={`${
                       pathname === "/electronics/digital" ? styles.active : ""
                     }`}
+                    onClick={onClick}
                   >
                     Digital
                   </Link>
@@ -57,6 +74,7 @@ const MobileNav = () => {
                         ? styles.active
                         : ""
                     }`}
+                    onClick={onClick}
                   >
                     Embedded systems
                   </Link>
@@ -67,47 +85,52 @@ const MobileNav = () => {
                         ? styles.active
                         : ""
                     }`}
+                    onClick={onClick}
                   >
                     Internet of things
                   </Link>
                 </div>
-              </div>
-            </li>
-            <li>
-              <Link
-                href="/forum"
-                className={`${pathname === "/forum" ? styles.active : ""}`}
-              >
-                Forum
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className={`${pathname === "/contact" ? styles.active : ""}`}
-              >
-                Contact
-              </Link>
-            </li>
-            <li className={styles.login}>
-              <Link
-                href="/login"
-                className={`${pathname === "/login" ? styles.active : ""}`}
-              >
-                Login
-              </Link>
-            </li>
-            <li className={styles.register}>
-              <Link
-                href="/register"
-                className={`${pathname === "/register" ? styles.active : ""}`}
-              >
-                Register
-              </Link>
-            </li>
-          </ul>
-        </motion.nav>
-      </AnimatePresence>
+              )}
+            </div>
+          </li>
+          <li>
+            <Link
+              href="/forum"
+              className={`${pathname === "/forum" ? styles.active : ""}`}
+              onClick={onClick}
+            >
+              Forum
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/contact"
+              className={`${pathname === "/contact" ? styles.active : ""}`}
+              onClick={onClick}
+            >
+              Contact
+            </Link>
+          </li>
+          <li className={styles.login}>
+            <Link
+              href="/login"
+              className={`${pathname === "/login" ? styles.active : ""}`}
+              onClick={onClick}
+            >
+              Login
+            </Link>
+          </li>
+          <li className={styles.register}>
+            <Link
+              href="/register"
+              className={`${pathname === "/register" ? styles.active : ""}`}
+              onClick={onClick}
+            >
+              Register
+            </Link>
+          </li>
+        </ul>
+      </motion.nav>
     </Fragment>
   );
 };

@@ -27,9 +27,26 @@
         position: relative;
         display: inline-block;
 
+        & > a {
+          display: flex;
+          align-items: center;
+          column-gap: 0.25rem;
+
+          svg {
+            width: 1.3rem;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+
         &:hover {
           .content {
             display: block;
+          }
+
+          a {
+            svg {
+              transform: rotate(180deg);
+            }
           }
         }
 

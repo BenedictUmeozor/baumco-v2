@@ -7,6 +7,8 @@ import Nav from "../Nav";
 import { Menu, X } from "react-feather";
 import { Fragment, useState } from "react";
 import MobileNav from "../MobileNav";
+import { AnimatePresence } from "framer-motion";
+import { v4 as uuidv4 } from "uuid";
 
 const Header = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -38,7 +40,15 @@ const Header = () => {
           </div>
         </Container>
       </header>
-      {showMobileNav && <MobileNav />}
+
+      <AnimatePresence>
+        {showMobileNav && (
+          <MobileNav
+            key={`element-${uuidv4()}`}
+            onClick={() => setShowMobileNav(false)}
+          />
+        )}
+      </AnimatePresence>
     </Fragment>
   );
 };

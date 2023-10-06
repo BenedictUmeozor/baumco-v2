@@ -39,20 +39,28 @@
     }
   }
 
-  p {
-    &:first-child {
-      font-size: 0.95rem;
-      color: #888;
-      margin-bottom: 0.5rem;
-    }
-    &:last-child {
-      font-size: 0.8rem;
+  .text {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+  }
 
-      span {
-        color: var(--primary-color);
+  .footer {
+    p {
+      display: inline-block;
+      
+      &:first-child {
+        font-size: 0.8rem;
+      }
+      &:last-child {
+        font-size: 0.8rem;
 
-        &:hover {
-          text-decoration: underline;
+        span {
+          color: var(--primary-color);
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }

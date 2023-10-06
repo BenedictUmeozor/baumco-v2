@@ -15,12 +15,14 @@
     "react-dom": "^18",
     "react-feather": "^2.0.10",
     "react-helmet": "^6.1.0",
-    "react-spinners": "^0.13.8"
+    "react-spinners": "^0.13.8",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/uuid": "^9.0.4",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
     "sass": "^1.68.0",
