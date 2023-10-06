@@ -1,6 +1,8 @@
 @import "../../sass/mixins";
 
 .section {
+  padding: 1.5rem 0;
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -12,9 +14,9 @@
     }
 
     .left {
-      @include mobile {
-        margin-bottom: 1rem;
-      }
+      // @include mobile {
+      //   margin-bottom: 0.5rem;
+      // }
 
       h2 {
         font-size: 2.75rem;
@@ -87,9 +89,17 @@
       align-items: center;
       justify-content: center;
 
+      @include mobile {
+        display: block;
+      }
+
       img {
         width: 90%;
         max-width: 450px;
+
+        @include mobile {
+          margin: auto;
+        }
       }
     }
   }

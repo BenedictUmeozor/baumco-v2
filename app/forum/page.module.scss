@@ -1,0 +1,66 @@
+@import "../../sass/mixins";
+
+.main {
+  padding: 1.5rem 0;
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 1.5rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    column-gap: 2rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      row-gap: 1.5rem;
+    }
+
+    .latestPost {
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    .post {
+      margin-bottom: 1.5rem;
+      display: grid;
+      grid-template-columns: 1.3fr 2.7fr;
+      column-gap: 0.5rem;
+
+      a {
+        font-weight: 500;
+        font-size: 1rem;
+        font-family: "Montserrat", sans-serif;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      p {
+        margin-top: 0.25rem;
+        font-size: 0.95rem;
+        color: #777;
+      }
+
+      .image {
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
