@@ -10,6 +10,7 @@ const Post = () => {
       initial={{ y: 200, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ type: "tween", delay: 0.5 }}
+      viewport={{ once: true }}
       className={styles.post}
     >
       <div className={styles.image}>
