@@ -7,7 +7,7 @@ import Nav from "../Nav";
 import { Menu, X } from "react-feather";
 import { Fragment, useState } from "react";
 import MobileNav from "../MobileNav";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { v4 as uuidv4 } from "uuid";
 
 const Header = () => {
@@ -27,9 +27,14 @@ const Header = () => {
     <Fragment>
       <header className={styles.header}>
         <Container className={styles.container}>
-          <Link href="/" className={styles.logo}>
-            BAUMco.
-          </Link>
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+          >
+            <Link href="/" className={styles.logo}>
+              BAUMco.
+            </Link>
+          </motion.div>
           <Nav />
           <div className={styles.auth}>
             <Link href={"/login"}>Login</Link>

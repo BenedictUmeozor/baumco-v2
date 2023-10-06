@@ -2,10 +2,17 @@ import Image from "next/image";
 import styles from "./post.module.scss";
 import image from "@/assets/post.jpg";
 import Link from "next/link";
+import MotionDiv from "../Layouts/MotionDiv";
 
 const Post = () => {
   return (
-    <div className={styles.post}>
+    <MotionDiv
+      className={styles.post}
+      initial={{ y: 30, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ type: "tween", delay: 0.5 }}
+    >
       <div className={styles.image}>
         <Image src={image} alt="post" width={200} height={200} />
         <div className={styles.overlay}></div>
@@ -25,7 +32,7 @@ const Post = () => {
           </p>
         </div>
       </div>
-    </div>
+    </MotionDiv>
   );
 };
 export default Post;

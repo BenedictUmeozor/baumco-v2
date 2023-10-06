@@ -1,10 +1,17 @@
 import { Bell, CheckSquare, MessageSquare } from "react-feather";
 import styles from "./topic.module.scss";
 import Link from "next/link";
+import MotionDiv from "../Layouts/MotionDiv";
 
 const ForumTopic = ({ topic }: { topic: string }) => {
   return (
-    <div className={styles.forumTopic}>
+    <MotionDiv
+      className={styles.forumTopic}
+      initial={{ x: -200, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ type: "tween", delay: 0.5 }}
+    >
       <div className={styles.header}>
         <div className={styles.topic}>{topic}</div>
         <div className={styles.icons}>
@@ -66,7 +73,7 @@ const ForumTopic = ({ topic }: { topic: string }) => {
           </div>
         </div>
       </div>
-    </div>
+    </MotionDiv>
   );
 };
 export default ForumTopic;
