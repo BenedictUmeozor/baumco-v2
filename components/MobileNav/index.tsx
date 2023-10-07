@@ -20,9 +20,9 @@ const MobileNav = ({ onClick, key }: PropTypes) => {
     <Fragment>
       <motion.nav
         key={key}
-        initial={{ x: "-100%" }}
-        animate={{ x: 0 }}
-        exit={{ x: "100%" }}
+        initial={{ x: -300, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: -300, opacity: 0 }}
         transition={{ duration: 0.3, type: "tween" }}
         className={styles.nav}
       >

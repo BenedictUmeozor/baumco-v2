@@ -5,7 +5,7 @@ import Container from "../Layouts/Container";
 import styles from "./header.module.scss";
 import Nav from "../Nav";
 import { Menu, X } from "react-feather";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import MobileNav from "../MobileNav";
 import { AnimatePresence, motion } from "framer-motion";
 import { v4 as uuidv4 } from "uuid";
@@ -22,6 +22,12 @@ const Header = () => {
       document.body.style.overflowY = "hidden";
     }
   };
+
+  useEffect(() => {
+    if (!showMobileNav) {
+      document.body.style.overflowY = "auto";
+    }
+  }, [showMobileNav]);
 
   return (
     <Fragment>
