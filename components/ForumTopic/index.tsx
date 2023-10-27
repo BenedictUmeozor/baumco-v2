@@ -13,7 +13,9 @@ const ForumTopic = ({ topic }: { topic: string }) => {
       transition={{ type: "tween", delay: 0.5 }}
     >
       <div className={styles.header}>
-        <div className={styles.topic}>{topic}</div>
+        <Link href={"/forum/" + topic} className={styles.topic}>
+          {topic}
+        </Link>
         <div className={styles.icons}>
           <div>
             <Bell />
@@ -28,7 +30,7 @@ const ForumTopic = ({ topic }: { topic: string }) => {
       <div className={styles.content}>
         <div className={styles.latest}>
           <h3>Latest</h3>
-          <Link href="/forum/post">
+          <Link href={"/forum/" + topic + "/title"}>
             <CheckSquare />
             Lorem ipsum dolor sit amet consectetur.
           </Link>
@@ -41,7 +43,7 @@ const ForumTopic = ({ topic }: { topic: string }) => {
           <h3>Top topics</h3>
           <ul>
             <li>
-              <Link href="/forum/post">
+              <Link href={"/forum/" + topic + "/title"}>
                 <CheckSquare />
                 Lorem ipsum dolor sit amet consectetur.
               </Link>
@@ -50,7 +52,7 @@ const ForumTopic = ({ topic }: { topic: string }) => {
               </p>
             </li>
             <li>
-              <Link href="/forum/post">
+              <Link href={"/forum/" + topic + "/title"}>
                 <CheckSquare />
                 Lorem ipsum dolor sit amet consectetur.
               </Link>

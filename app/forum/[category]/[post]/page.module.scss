@@ -1,0 +1,41 @@
+.post {
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .main {
+    margin-bottom: 1rem;
+    .attr {
+      font-size: 0.9rem;
+      color: #333;
+      margin-bottom: 0.75rem;
+
+      a {
+        color: var(--secondary-color);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .text {
+      padding: 0.75rem;
+      border: 0.15rem solid #aaa;
+    }
+  }
+
+  .auth {
+    font-size: 0.95rem;
+
+    a {
+      color: var(--primary-color);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
