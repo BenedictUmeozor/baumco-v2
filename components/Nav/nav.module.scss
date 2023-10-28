@@ -21,6 +21,10 @@
         &.active {
           color: var(--primary-color);
         }
+
+        &:hover {
+          color: var(--primary-color);
+        }
       }
 
       .dropdown {

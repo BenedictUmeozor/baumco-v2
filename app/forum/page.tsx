@@ -1,7 +1,7 @@
 import Container from "@/components/Layouts/Container";
 import styles from "./page.module.scss";
 import ForumTopic from "@/components/ForumTopic";
-import LatestPosts from "./LatestPosts";
+import LatestPosts from "../LatestPosts";
 import { v4 as uuidv4 } from "uuid";
 
 const formTopics = [

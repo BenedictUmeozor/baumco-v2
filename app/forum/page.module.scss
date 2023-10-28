@@ -18,6 +18,10 @@
     font-weight: 500;
     color: var(--primary-color);
 
+    &.heading {
+      color: #111;
+    }
+
     &:hover {
       text-decoration: underline;
     }

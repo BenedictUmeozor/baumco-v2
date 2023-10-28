@@ -18,7 +18,7 @@ const Post = () => {
         <div className={styles.overlay}></div>
       </div>
       <div className={styles.content}>
-        <Link href="/">
+        <Link href="/posts/1">
           <h3>Lorem ipsum dolor sit amet consectetur.</h3>
         </Link>
         <p className={styles.text}>

@@ -1,8 +1,6 @@
 @import "../../sass/mixins";
 
-.posts {
-  padding: 2rem 0;
-
+.section {
   h2 {
     font-size: 1.75rem;
     font-family: "Montserrat", sans-serif;
@@ -10,7 +8,7 @@
     margin-bottom: 1.5rem;
   }
 
-  .container {
+  .posts {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 1.5rem;
@@ -22,19 +20,6 @@
 
     @include mobile {
       grid-template-columns: 1fr;
-    }
-  }
-  .posts_link {
-    display: inline-flex;
-    align-items: center;
-    column-gap: 0.25rem;
-    margin-top: 2rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: #fff;
-
-    &:hover {
-      background-color: darken($color: #0040ff, $amount: 15);
     }
   }
 }

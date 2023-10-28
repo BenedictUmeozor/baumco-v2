@@ -1,0 +1,128 @@
+@import "../../../sass/mixins";
+
+.post_page {
+  .author {
+    margin-bottom: 1rem;
+
+    p {
+      &:first-child {
+        font-weight: 500;
+
+        a {
+          color: var(--secondary-color);
+          font-weight: 400;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &:last-child {
+        font-size: 0.95rem;
+        color: #444;
+      }
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 1.5rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      row-gap: 1.5rem;
+    }
+
+    .right {
+      h2 {
+        font-size: 1.75rem;
+        font-family: "Montserat", sans-serif;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .left {
+      .post {
+        .image {
+          img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+
+        .title {
+          margin: 1rem 0 1.25rem;
+          font-weight: 500;
+          font-size: 1.5rem;
+        }
+
+        .content {
+          p {
+            color: #333;
+            margin-bottom: 1rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .tags {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          flex-wrap: wrap;
+          margin: 1.5rem 0;
+
+          a {
+            padding: 0.4rem 0.75rem;
+            background-color: #cee7eb;
+          }
+        }
+
+        .comments {
+          .auth {
+            a {
+              color: var(--primary-color);
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.related_post {
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem 0;
+
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.25rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+}

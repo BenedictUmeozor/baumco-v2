@@ -1,4 +1,4 @@
-import Post from "./Post";
+import Post from "./forum/Post";
 import styles from "./page.module.scss";
 
 const LatestPosts = () => {
