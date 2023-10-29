@@ -1,7 +1,7 @@
 "use client";
 
 import { Inter } from "next/font/google";
-import React, { useState } from "react";
+import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
 

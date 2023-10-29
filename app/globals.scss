@@ -47,7 +47,7 @@ a {
 
 button {
   transition: all 0.3s ease-in-out;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Inter", sans-serif;
   cursor: pointer;
 }
 
@@ -114,16 +114,16 @@ form {
 }
 
 input {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Inter", sans-serif;
   &::placeholder {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", "Inter", sans-serif;
   }
 }
 
 textarea {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Inter", sans-serif;
   &::placeholder {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", "Inter", sans-serif;
   }
 }
 
