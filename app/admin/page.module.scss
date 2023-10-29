@@ -1,5 +1,14 @@
 @import "../../sass/mixins";
 
+.page {
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-family: "Montserrat", "Inter", sans-serif;
+  }
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr;

@@ -35,7 +35,8 @@ const Row = () => {
 
 const Page = () => {
   return (
-    <div>
+    <div className={styles.page}>
+      <h2>All Posts</h2>
       <div className={styles.table}>
         <Row />
         <Row />
