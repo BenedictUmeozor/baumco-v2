@@ -126,3 +126,12 @@ textarea {
     font-family: "Montserrat", sans-serif;
   }
 }
+
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.quill > .ql-container {
+  font-family: "Inter", "Montserrat", sans-serif;
+}
