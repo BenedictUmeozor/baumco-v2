@@ -2,8 +2,10 @@
 
 import { Inter } from "next/font/google";
 import { useState } from "react";
-import ReactQuill from "react-quill";
+import dynamic from "next/dynamic";
 import "react-quill/dist/quill.bubble.css";
+
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 type PropTypes = {
   placeholder?: string;
